@@ -2,12 +2,12 @@
     --primay-color: #1bc6df;
 }
 body{
-    margin: 0 20px;
+    margin: 0px;
     box-sizing: border-box;
 }
 .header__title {
     width: 100%;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,28 +17,101 @@ body{
 }
 .header__left a {
     text-decoration: none;
+    font-size: 29px;
+    font-weight: 700;
+    color: white;
+
 }
 .header__right {
 
 }
 .header__right ul {
     display: flex;
+    margin-bottom: 0;
 }
 .header__right ul li {
-    margin-left: 15px;
+    margin-left: 9rem;
+}
+.header__right ul li a {
+    font-size: 20px;
+    font-weight: 700;
 }
 .header__right ul li a {
     text-decoration: none;
 }
 .register {
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+}
+.register-btn:hover {
+    transition: 0.5s;
+    color: pink;
 }
 .register ul {
     display: flex;
+}
+.timer {
+    margin-bottom: 3.6rem;
+}
+.timer li {
+    display: flex;
+    align-items: center;
+}
+.timer li span {
+    background: white;
+    margin-left: 15px;
+    font-size: 30px;
+    padding: 0 15px;
+    border-radius: 15px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.register-btn {
+    padding: 17px 30px;
+    border-radius: 3.4rem;
+}
+.body__header__content {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 4rem 0rem;
+
+}
+.body__header__content h1 {
+    font-size: 25px;
+    font-weight: 700;
+
+}
+.body__header__content h2 {
+    font-size: 30px;
+    font-weight: 400;
+    border-bottom: 2px solid indianred;
+}
+.body__header__content span {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31px;
+}
+.my__table tr th:first-child {
+    width: 30%;
+    text-align: center;
+}
+.body__list {
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+.body__list ul {
+    padding: 0;
+}
+.item {
+    margin-bottom: 2.5rem;
+}
+.item img {
+    object-fit: cover;
 }

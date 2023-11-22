@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Event</title>
 </head>
 <body>
@@ -23,54 +23,68 @@
         </div>
     </div>
     <div class="d-flex justify-content-center register ">
-        <ul>
-            <li>02<span>Days</span></li>
-            <li>02<span>Hours</span></li>
-            <li>02<span>Minutes</span></li>
-            <li>02<span>Seconds</span></li>
+        <ul class="timer">
+            <li><span id="day"></span>Days</li>
+            <li><span id="hours"></span>Hours</li>
+            <li><span id="minute"></span>Minutes</li>
+            <li><span id="second"></span>Seconds</li>
         </ul>
-        <a href=""><span class="btn btn-primary">Register Now</span></a>
+        <a href=""><span class="btn btn-primary register-btn">Register Now</span></a>
     </div>
     <img src="./assets/hero_home.png" alt="" class="hero">
 </section>
-<section class="container body">
-    <h1>
-        Virtual event
-    </h1>
-    <h2>
-        25 NOV 2023
-    </h2>
-    <span>Virtual event, all talks about Microsoft .NET!</span>
-    <div class="body__list">
+<section class="container flex-row justify-content-center body">
+    <div class="d-flex justify-content-center body__header__content ">
+        <h1>
+            Soc Son Team Building
+        </h1>
+        <h2>15 DEC 2023</h2>
+<!--        <span></span>-->
+    </div>
+<!--    <div class="schedule">-->
+<!--        <h1></h1>-->
+<!--        <table class="table my__table">-->
+<!--            <tbody>-->
+<!--            <tr>-->
+<!--                <th>9:05 AM - 9:55 AM</th>-->
+<!--                <th>Taap trung</th>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <th>9:05 AM - 9:55 AM</th>-->
+<!--                <th>Taap trung</th>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+    <div class="d-flex justify-content-center body__list ">
+        <p>Fern Home được ưu ái đặt nằm ở vị trí trung tâm của Sausau garden, với góc view 360 độ panorama làm Fern như được hoà mình vào thiên nhiên ⛰️🌲
+            Điều đặc biệt của Fern nằm ở căn bếp nhỏ xinh lại vô cùng ấm áp, quây quần. Cả gia đình cùng nhau chuẩn bị bữa ăn, trẻ con đứa đùa nghịch ở bể bơi, đứa lại chơi bập bênh, đuổi bắt dưới sân cỏ… khoảnh khắc đó chính là hạnh phúc mà Fern Home mong muốn được ghi dấu lại</p>
         <ul>
             <li class="item">
-                <img src="" alt="">
-                <span></span>
+                <img src="./socson/1.jpg" alt="">
             </li>
             <li class="item">
-                <img src="" alt="">
-                <span></span>
+                <img src="./socson/2.jpg" alt="">
             </li>
             <li class="item">
-                <img src="" alt="">
-                <span></span>
+                <img src="./socson/3.jpg" alt="">
+            </li>
+            <li class="item">
+                <img src="./socson/4.jpg" alt="">
+            </li>
+            <li class="item">
+                <img src="./socson/5.jpg" alt="">
+            </li>
+            <li class="item">
+                <img src="./socson/6.jpg" alt="">
+            </li>
+            <li class="item">
+                <img src="./socson/7.jpg" alt="">
+            </li>
+            <li class="item">
+                <img src="./socson/8.jpg" alt="">
             </li>
         </ul>
-    </div>
-    <div class="schedule">
-        <h1></h1>
-        <table class="table ">
-            <tbody>
-                <tr>
-                    <th>9:05 AM - 9:55 AM</th>
-                    <th>Taap trung</th>
-                </tr>
-                <tr>
-                    <th>9:05 AM - 9:55 AM</th>
-                    <th>Taap trung</th>
-                </tr>
-            </tbody>
-        </table>
     </div>
     <div class="post__content">
         <div class="about">
@@ -84,6 +98,31 @@
 
 </body>
 <script>
+    var countDownDate = new Date("Dec 5, 2023 24:0:0").getTime();
+    var x = setInterval(function() {
 
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        document.getElementById("day").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minute").innerHTML = minutes;
+        document.getElementById("second").innerHTML = seconds;
+        // If the count down is over, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
 </script>
 </html>
