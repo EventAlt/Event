@@ -1,0 +1,44 @@
+:root {
+    --primay-color: #1bc6df;
+}
+body{
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+.header__title {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 70px;
+
+
+}
+.header__left a {
+    text-decoration: none;
+}
+.header__right {
+
+}
+.header__right ul {
+    display: flex;
+}
+.header__right ul li {
+    margin-left: 15px;
+}
+.header__right ul li a {
+    text-decoration: none;
+}
+.register {
+    width: 100%;
+    position: fixed;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.register ul {
+    display: flex;
+}
